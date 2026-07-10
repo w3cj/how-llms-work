@@ -1,0 +1,26 @@
+# deps
+node_modules/
+
+# build output
+dist/
+static/
+
+# env
+.env
+.env.*
+
+# logs
+*.log
+
+# os
+.DS_Store
+Thumbs.db
+
+# editor
+.idea/
+
+# project data (trained model weights, generated files)
+.data/
+
+# claude code
+.claude/

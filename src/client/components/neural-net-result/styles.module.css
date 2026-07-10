@@ -1,0 +1,88 @@
+.label {
+  font-size: var(--text-8);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted-foreground);
+  font-weight: var(--font-semibold);
+  margin-bottom: var(--space-1);
+}
+
+.epochList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  /* max-height: var(--space-18); */
+  /* overflow-y: auto; */
+  font-family: var(--font-mono);
+  font-size: var(--text-8);
+}
+
+.epochRow {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.epochNum {
+  color: var(--muted-foreground);
+}
+
+.lossHigh {
+  color: var(--warning);
+}
+
+.lossLow {
+  color: var(--success);
+}
+
+.predictions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.predictionRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: var(--font-mono);
+  font-size: var(--text-7);
+  padding: var(--space-1) var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-large);
+}
+
+.predictionInput {
+  font-weight: var(--font-bold);
+}
+
+.predictionExpected {
+  color: var(--muted-foreground);
+}
+
+.correct {
+  color: var(--success);
+  font-weight: var(--font-bold);
+}
+
+.incorrect {
+  color: var(--danger);
+  font-weight: var(--font-bold);
+}
+
+.verdict {
+  font-size: var(--text-5);
+  font-weight: var(--font-bold);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-large);
+}
+
+.verdictSuccess {
+  color: var(--success);
+  background: var(--faint);
+}
+
+.verdictFailed {
+  color: var(--danger);
+  background: var(--faint);
+}

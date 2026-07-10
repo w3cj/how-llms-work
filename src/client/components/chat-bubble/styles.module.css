@@ -1,0 +1,26 @@
+.row {
+  display: flex;
+  margin-bottom: var(--space-3);
+}
+
+.rowUser {
+  justify-content: flex-end;
+}
+
+.rowAssistant {
+  justify-content: flex-start;
+}
+
+.bubbleUser {
+  max-width: 80%;
+  background: var(--secondary);
+  color: var(--foreground);
+  border: 1px solid var(--border);
+  white-space: pre-wrap;
+}
+
+.assistant {
+  flex: 1;
+  max-width: 100%;
+  color: var(--foreground);
+}

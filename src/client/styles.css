@@ -1,0 +1,55 @@
+@import "@knadh/oat/oat.min.css";
+
+:root {
+  color-scheme: light dark;
+
+  --background: light-dark(#f5f5f0, #212121);
+  --foreground: light-dark(#1a1a1a, #ececec);
+  --card: light-dark(#ffffff, #2f2f2f);
+  --card-foreground: light-dark(#1a1a1a, #ececec);
+  --primary: light-dark(#1a1a1a, #ececec);
+  --primary-foreground: light-dark(#f5f5f0, #212121);
+  --secondary: light-dark(#e8e8e3, #2f2f2f);
+  --secondary-foreground: light-dark(#1a1a1a, #ececec);
+  --muted: light-dark(#e8e8e3, #2f2f2f);
+  --muted-foreground: light-dark(#6e6e6e, #9a9a9a);
+  --faint: light-dark(#fafaf7, #1a1a1a);
+  --accent: light-dark(#e8e8e3, #2f2f2f);
+  --danger: light-dark(#d32f2f, #ef4444);
+  --danger-foreground: light-dark(#fafafa, #ececec);
+  --success: light-dark(#008032, #4caf50);
+  --success-foreground: light-dark(#fafafa, #ececec);
+  --warning: light-dark(#a65b00, #ff8c00);
+  --warning-foreground: light-dark(#1a1a1a, #212121);
+  --border: light-dark(#d8d8d3, #3e3e3e);
+  --input: light-dark(#d8d8d3, #3e3e3e);
+  --ring: light-dark(#1a1a1a, #ececec);
+}
+
+@keyframes bounce-dot {
+  0%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-6px);
+  }
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+#root {
+  height: 100%;
+}
+
+@layer components {
+  .card {
+    border-radius: var(--radius-large);
+    padding: var(--space-3);
+  }
+}

@@ -1,0 +1,20 @@
+.header {
+  border-bottom: 1px solid var(--border);
+  padding: var(--space-4);
+  text-align: center;
+}
+
+.select {
+  margin-bottom: var(--space-4);
+}
+
+.title {
+  margin: 0;
+  font-size: var(--text-4);
+}
+
+.tagline {
+  margin: var(--space-1) 0 0;
+  font-size: var(--text-7);
+  color: var(--muted-foreground);
+}

@@ -1,0 +1,90 @@
+.label {
+  font-size: var(--text-8);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted-foreground);
+  font-weight: var(--font-semibold);
+  margin-bottom: var(--space-1);
+}
+
+.config {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.configItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-large);
+  font-size: var(--text-8);
+}
+
+.configValue {
+  font-family: var(--font-mono);
+  font-weight: var(--font-bold);
+}
+
+.epochList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  font-family: var(--font-mono);
+  font-size: var(--text-8);
+}
+
+.epochRow {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.epochNum {
+  color: var(--muted-foreground);
+}
+
+.lossHigh {
+  color: var(--warning);
+}
+
+.lossLow {
+  color: var(--success);
+}
+
+.samples {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.sample {
+  padding: var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-large);
+}
+
+.sampleEpoch {
+  font-size: var(--text-8);
+  color: var(--muted-foreground);
+  margin-bottom: var(--space-1);
+}
+
+.sampleText {
+  font-family: var(--font-mono);
+  font-size: var(--text-7);
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.verdict {
+  font-size: var(--text-5);
+  font-weight: var(--font-bold);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-large);
+  color: var(--success);
+  background: var(--faint);
+}

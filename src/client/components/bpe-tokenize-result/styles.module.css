@@ -1,0 +1,136 @@
+.section {
+  margin-bottom: var(--space-2);
+}
+
+.label {
+  font-size: var(--text-8);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted-foreground);
+  font-weight: var(--font-semibold);
+  margin-bottom: var(--space-1);
+  cursor: pointer;
+  list-style: none;
+}
+
+.label::-webkit-details-marker {
+  display: none;
+}
+
+.label::before {
+  content: "\25B6";
+  display: inline-block;
+  margin-right: var(--space-1);
+  font-size: var(--text-9);
+  transition: transform 0.15s;
+}
+
+.section[open] > .label::before {
+  transform: rotate(90deg);
+}
+
+.corpus {
+  font-family: var(--font-mono);
+  font-size: var(--text-8);
+  padding: var(--space-2) var(--space-3);
+  background: var(--faint);
+  border-radius: var(--radius-large);
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-height: var(--space-18);
+  overflow-y: auto;
+  margin: 0;
+}
+
+.tokens {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+
+.charBadge {
+  font-family: var(--font-mono);
+  font-size: var(--text-9);
+  padding: var(--space-0) var(--space-1);
+}
+
+.truncated {
+  font-size: var(--text-9);
+  color: var(--muted-foreground);
+  align-self: center;
+}
+
+.mergeList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  font-family: var(--font-mono);
+  font-size: var(--text-8);
+}
+
+.mergeRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.stepNum {
+  color: var(--muted-foreground);
+  min-width: 2em;
+  text-align: right;
+}
+
+.pair {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.pairToken {
+  background: var(--faint);
+  padding: var(--space-0) var(--space-1);
+  border-radius: var(--radius-small);
+}
+
+.arrow {
+  color: var(--muted-foreground);
+}
+
+.merged {
+  font-weight: var(--font-bold);
+  background: var(--faint);
+  padding: var(--space-0) var(--space-1);
+  border-radius: var(--radius-small);
+}
+
+.freq {
+  color: var(--muted-foreground);
+  font-size: var(--text-9);
+}
+
+.stats {
+  color: var(--muted-foreground);
+  font-size: var(--text-9);
+  margin-left: auto;
+}
+
+.vocabBadge {
+  font-family: var(--font-mono);
+  font-size: var(--text-8);
+  font-weight: var(--font-bold);
+}
+
+.resultBadge {
+  font-family: var(--font-mono);
+  font-size: var(--text-8);
+  font-weight: var(--font-bold);
+}
+
+.compression {
+  font-size: var(--text-5);
+  font-weight: var(--font-bold);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-large);
+  color: var(--success);
+  background: var(--faint);
+}

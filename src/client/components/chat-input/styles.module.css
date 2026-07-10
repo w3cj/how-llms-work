@@ -1,0 +1,19 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  border-top: 1px solid var(--border);
+}
+
+.wrapper textarea {
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  resize: none;
+}
+
+.wrapper button {
+  align-self: flex-end;
+  border-radius: var(--radius-full);
+  padding: var(--space-3) var(--space-6);
+}
