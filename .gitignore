@@ -20,7 +20,9 @@ Thumbs.db
 .idea/
 
 # project data (trained model weights, generated files)
-.data/
+# keep the directory in the repo, but ignore everything generated inside it
+.data/*
+!.data/.gitkeep
 
 # claude code
 .claude/
