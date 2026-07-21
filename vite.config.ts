@@ -9,6 +9,7 @@ export default defineConfig(({ mode }) => {
           input: "./src/client/index.tsx",
           output: {
             entryFileNames: "static/client.js",
+            assetFileNames: "static/[name][extname]",
           },
         },
       },
@@ -19,6 +20,10 @@ export default defineConfig(({ mode }) => {
   }
 
   return {
+    build: {
+      ssr: "src/index.tsx",
+      emptyOutDir: false,
+    },
     esbuild: {
       jsxImportSource: "hono/jsx",
     },

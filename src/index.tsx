@@ -1,4 +1,5 @@
 /** Server entry point — serves the SPA shell, static assets, and all demo API routes. */
+import { serve } from "@hono/node-server";
 import { serveStatic } from "@hono/node-server/serve-static";
 import { Hono } from "hono";
 import { jsxRenderer } from "hono/jsx-renderer";
@@ -11,7 +12,7 @@ import trainTransformer from "./routes/train-transformer/index.js";
 
 const app = new Hono();
 
-app.use("/static/*", serveStatic({ root: "./" }));
+app.use("/static/*", serveStatic({ root: "./dist" }));
 
 app.get(
   "*",
@@ -31,7 +32,8 @@ app.get("/", c =>
   c.render(
     <>
       <div id="root" />
-      {import.meta.env.PROD && <script type="module" src="/static/client/index.js" />}
+      {import.meta.env.PROD && <link rel="stylesheet" href="/static/index.css" />}
+      {import.meta.env.PROD && <script type="module" src="/static/client.js" />}
       {!import.meta.env.PROD && <script type="module" src="/src/client/index.tsx" />}
     </>,
   ));
@@ -39,7 +41,8 @@ app.get("/", c =>
 app.notFound(c => c.render(
   <>
     <div id="root" />
-    {import.meta.env.PROD && <script type="module" src="/static/client/index.js" />}
+    {import.meta.env.PROD && <link rel="stylesheet" href="/static/index.css" />}
+    {import.meta.env.PROD && <script type="module" src="/static/client.js" />}
     {!import.meta.env.PROD && <script type="module" src="/src/client/index.tsx" />}
   </>,
 ));
@@ -48,3 +51,10 @@ const _routes = app.route("/", simpleChat).route("/", bpeTokenize).route("/", tr
 
 export type App = typeof _routes;
 export default app;
+
+if (import.meta.env.PROD) {
+  const port = Number(process.env.PORT || 3000);
+  serve({ fetch: app.fetch, port }, () => {
+    console.log(`Server running at http://localhost:${port}`);
+  });
+}
