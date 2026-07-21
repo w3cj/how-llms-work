@@ -28,6 +28,14 @@ pnpm install
 pnpm dev
 ```
 
+If pnpm reports ignored build scripts, run:
+
+```sh
+pnpm approve-builds
+```
+
+Select `esbuild` with Space, press Enter, then rerun `pnpm install`.
+
 ## Sections
 
 ### 1. Simple Chat — Pattern Matching
