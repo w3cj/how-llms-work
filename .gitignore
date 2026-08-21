@@ -26,3 +26,5 @@ Thumbs.db
 
 # claude code
 .claude/
+
+pnpm-workspace.yaml
