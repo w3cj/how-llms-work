@@ -1,6 +1,6 @@
 /** Page header with navigation dropdown (selects the demo page), title, and tagline. */
 import type { RoutePath } from "@w3cj/ruta";
-import { Link, useLocation } from "@w3cj/ruta";
+import { Link, navigate, useLocation } from "@w3cj/ruta";
 import { useChatContext } from "../../hooks/use-chat-context.js";
 import styles from "./styles.module.css";
 
@@ -18,7 +18,16 @@ export function Header() {
 
   return (
     <div class={styles.header}>
-      <select aria-label="Select an page" class={styles.select}>
+      <select
+        aria-label="Select a page"
+        class={styles.select}
+        onChange={(e) => {
+          const next = (e.target as HTMLSelectElement).value;
+          if (next && next !== location) {
+            navigate(next);
+          }
+        }}
+      >
         {options.map(route => (
           <Link
             key={route.path}
